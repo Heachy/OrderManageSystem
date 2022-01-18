@@ -1,0 +1,18 @@
+CREATE DATABASE orderform CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE `orderform`;
+
+CREATE TABLE indent (
+`order_number` VARCHAR(50) NOT NULL COMMENT '订单编号',
+`product_number` VARCHAR(50) NOT NULL COMMENT '商品编号',
+`amount` INT NOT NULL COMMENT '购买数量',
+`order_time` DATE NOT NULL COMMENT '订单时间',
+PRIMARY KEY (`order_number`)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE product (
+`product_number` VARCHAR(50) NOT NULL COMMENT '商品编号',
+`name` VARCHAR(80) NOT NULL COMMENT '商品名称',
+`price` INT NOT NULL COMMENT '商品价格',
+PRIMARY KEY (`product_number`)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
